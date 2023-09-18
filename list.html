@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 头部样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet " href="css/list.css"/>
+	<script src="js/list.js"></script>
+	<script src="./js/shoppingcart.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- 1.页面的头部模块 -->
+    <header>
+        <!-- 1. 顶部导航 -->
+        <div class="top-nav">
+            <!-- 版心 -->
+            <div class="container">
+                <ul>
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="register.html">免费注册</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li><a href="#">会员中心</a></li>
+                    <li><a href="#">在线客服</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">手机版</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 2. 主导航 -->
+        <div class="main-nav">
+            <!-- 版心 -->
+            <div class="container">
+                <!-- 1. logo -->
+                <div class="logo">
+                    <h1>
+                        <a href="#" title="Brand官网">Brand</a>
+                    </h1>
+                </div>
+                <!-- 2. nav 导航 -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">生鲜</a></li>
+                        <li><a href="#">美食</a></li>
+                        <li><a href="#">餐厨</a></li>
+                        <li><a href="#">手机</a></li>
+                        <li><a href="#">居家</a></li>
+                        <li><a href="#">洗护</a></li>
+                        <li><a href="#">孕婴</a></li>
+                        <li><a href="#">服装</a></li>
+                    </ul>
+                </nav>
+                <!-- 3. search 模块 -->
+                <div class="search">
+                    <input type="text" placeholder="搜一搜">
+                </div>
+                <!-- 4. 购物车 cart -->
+                <div class="cart">
+                    <a href="#">
+                        <span>4</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+	<!-- 购物车内容 -->
+	<div id="container">
+		<div id="title" class="all">
+			<div class="item1">
+				<input type="checkbox" id="chkAll"
+				onclick="selectAll(this)">
+				全选
+				&nbsp;&nbsp;商品信息
+			</div>
+			<div class="item2"></div>
+			<div class="item3"></div>
+			<div class="item4">单价（元）</div>
+			<div class="item5">数量</div>
+			<div class="item6">金额（元）</div>
+			<div class="item7">操作</div>
+		</div> <!-- --end of title-- -->			
+		<div class="shop">
+			<div>
+				<input type="checkbox" class="chkshop"
+				onclick="checkshop(this)"/>
+				品牌：华为
+			</div>				
+			<div class="goods">
+			<div class="item1">
+				<input type="hidden" value="g77">
+				<input type="checkbox" class="chkgoods"
+				 onclick="checkGoods(this)"/>
+				<img src="uploads/new_goods_1.jpg" width="60px" 
+				align="top" onmouseenter="show(this)" onmouseleave="hide(this)"/>
+				<img src="uploads/new_goods_1.jpg" width="160px"
+				align="top" class="big"/>
+			</div>
+			<div class="item2">华为Mate 50 Pro曲屏旗舰 </div>
+			<div class="item3">昆仑霞光；8GB+256G</div>
+			<div class="item4">6999</div>
+			<div class="item5">
+				<input type="number" min="1" value="1" 
+				style="width:50px" onchange="count(this)"/></div>
+			<div class="item6">6999</div>
+			<div class="item7">
+				<a href="#" onclick="save(this)">收藏</a>|
+				<a href="#" onclick="del(this)">删除</a>
+			</div>
+			</div><!-- ---end of goods---->
+		</div><!-- ---end of shop--- -->
+		<div class="shop">
+			<div>
+				<input type="checkbox" class="chkshop"
+				onclick="checkshop(this)"/>
+				品牌：APPle Store
+			</div>				
+			<div class="goods">
+			<div class="item1">
+				<input type="hidden" value="g79">
+				<input type="checkbox" class="chkgoods"
+				 onclick="checkGoods(this)"/>
+				<img src="uploads/new_goods_2.jpg" width="60px" 
+				align="top" onmouseenter="show(this)" onmouseleave="hide(this)"/>
+				<img src="uploads/new_goods_2.jpg" width="160px"
+				align="top" class="big"/>
+			</div>
+			<div class="item2">Apple/苹果 iPhone 14</div>
+			<div class="item3">暗夜紫；1TB；无需合约版</div>
+			<div class="item4">12499</div>
+			<div class="item5">
+				<input type="number" min="1" value="1" 
+				style="width:50px" onchange="count(this)"/></div>
+			<div class="item6">12499</div>
+			<div class="item7">
+				<a href="#" onclick="save(this)">收藏</a>|
+				<a href="#" onclick="del(this)">删除</a>
+			</div>
+			</div><!-- ---end of goods---->
+		</div><!-- ---end of shop--- -->
+		<div class="shop">
+			<div>
+				<input type="checkbox" class="chkshop"
+				onclick="checkshop(this)"/>
+				品牌：三星
+			</div>				
+			<div class="goods">
+			<div class="item1">
+				<input type="hidden" value="g79">
+				<input type="checkbox" class="chkgoods"
+				 onclick="checkGoods(this)"/>
+				<img src="uploads/new_goods_3.jpg" width="60px" 
+				align="top" onmouseenter="show(this)" onmouseleave="hide(this)"/>
+				<img src="uploads/new_goods_3.jpg" width="160px"
+				align="top" class="big"/>
+			</div>
+			<div class="item2">三星Galaxy S22 Ultra</div>
+			<div class="item3">雾松绿；12GB+512GB</div>
+			<div class="item4">10499</div>
+			<div class="item5">
+				<input type="number" min="1" value="1" 
+				style="width:50px" onchange="count(this)"/></div>
+			<div class="item6">10499</div>
+			<div class="item7">
+				<a href="#" onclick="save(this)">收藏</a>|
+				<a href="#" onclick="del(this)">删除</a>
+			</div>
+			</div><!-- ---end of goods---->
+		</div><!-- ---end of shop--- -->
+		<div class="shop">
+			<div>
+				<input type="checkbox" class="chkshop"
+				onclick="checkshop(this)"/>
+				品牌：小米
+			</div>				
+			<div class="goods">
+			<div class="item1">
+				<input type="hidden" value="g79">
+				<input type="checkbox" class="chkgoods"
+				 onclick="checkGoods(this)"/>
+				<img src="uploads/new_goods_4.jpg" width="60px" 
+				align="top" onmouseenter="show(this)" onmouseleave="hide(this)"/>
+				<img src="uploads/new_goods_4.jpg" width="160px"
+				align="top" class="big"/>
+			</div>
+			<div class="item2">小米12S Ultra徕卡双画质</div>
+			<div class="item3">经典黑；12GB+256GB</div>
+			<div class="item4">6499</div>
+			<div class="item5">
+				<input type="number" min="1" value="1" 
+				style="width:50px" onchange="count(this)"/></div>
+			<div class="item6">6499</div>
+			<div class="item7">
+				<a href="#" onclick="save(this)">收藏</a>|
+				<a href="#" onclick="del(this)">删除</a>
+			</div>
+			</div><!-- ---end of goods---->
+		</div><!-- ---end of shop--- -->
+		
+		<div>
+			总计<span id="piece">0</span>件
+			金额<span id="money">0</span>元
+		</div>
+		
+	</div><!----end of container---->
+
+    <!-- 3. 页面底部模块 -->
+    <footer>
+        <!-- 上 concat 模块 -->
+        <div class="concat">
+            <!-- 版心 -->
+            <div class="container">
+                <dl class="service">
+                    <dt>客户服务</dt>
+                    <dd class="kefu">
+                        在线客服
+                    </dd>
+                    <dd class="fankui">问题反馈</dd>
+                </dl>
+                <dl class="service">
+                    <dt>客户服务</dt>
+                    <dd class="kefu">
+                        在线客服
+                    </dd>
+                    <dd class="fankui">问题反馈</dd>
+                </dl>
+                <dl class="service">
+                    <dt>客户服务</dt>
+                    <dd class="kefu">
+                        在线客服
+                    </dd>
+                    <dd class="fankui">问题反馈</dd>
+                </dl>
+            </div>
+        </div>
+        <!-- 下 底部主体模块 -->
+        <div class="footer-bd">
+            <div class="container">
+                <!-- 1.口号模块 -->
+                <section class="slogan">
+                    <ul>
+                        <li>价格亲民</li>
+                        <li class="wuliu">物流快捷</li>
+                        <li>品质新鲜</li>
+                    </ul>
+                </section>
+                <!-- 2.版权模块 -->
+                <div class="copyright">
+                    <p>
+                        <a href="#">关于我们</a> |
+                        <a href="#">帮助中心</a> |
+                        <a href="#">售后服务</a> |
+                        <a href="#">配送与验收</a> |
+                        <a href="#">商务合作</a> |
+                        <a href="#">搜索推荐</a> |
+                        <a href="#">友情链接</a>
+                    </p>
+                    <p>CopyRight @ 助农</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
